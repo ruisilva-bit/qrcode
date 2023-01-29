@@ -73,9 +73,10 @@ echo "File does not exist.";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.5">
     <title>QrCode</title>
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-
+<h1 class="Tittle">Qr Code Generator</h1>
     <form method="post" action="index.php" class="input_form">
             <input type="text" name="qr_info" class="enco_input">
             <button type="submit" name="submit" id="add_btn" class="add_btn">Gerar</button>
