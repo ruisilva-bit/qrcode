@@ -52,7 +52,8 @@ readfile($filename);
 die();
 }
 else{
-echo "File does not exist.";
+$error = "File does not exist.";
+
 }
 }
 ?>
