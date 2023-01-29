@@ -74,8 +74,11 @@ echo "File does not exist.";
     <meta name="viewport" content="width=device-width, initial-scale=1.5">
     <title>QrCode</title>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
 </head>
 <body>
+
+<div class="container">
 <h1 class="Tittle">Qr Code Generator</h1>
     <form method="post" action="index.php" class="input_form">
             <input type="text" name="qr_info" class="enco_input">
@@ -92,6 +95,7 @@ if (isset($_POST['submit'])){
     }
 
 }?>
+</div>
 
 </body>
 </html>
