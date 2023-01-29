@@ -3,6 +3,8 @@
 
 include 'phpqrcode/qrlib.php';
 
+$error = "";
+
 function clean($string) {
     $string = str_replace(' ', '-', $string);
  
@@ -17,7 +19,7 @@ $path = 'images/';
 $file = $path.$text.".png";
 
 if (empty($text)) {
-echo "Digite um valor válido!";
+$error = "<p class='error'>Digite um valor válido</p>";
 }else{
 QRcode::png($text1, $file, 'L', 7);
 }
@@ -80,21 +82,25 @@ echo "File does not exist.";
 
 <div class="container">
 <h1 class="Tittle">Qr Code Generator</h1>
+
     <form method="post" action="index.php" class="input_form">
-            <input type="text" name="qr_info" class="enco_input">
-            <button type="submit" name="submit" id="add_btn" class="add_btn">Gerar</button>
+            <input type="text" name="qr_info" class="text_input" placeholder="Escreva o texto a gerar...">
+            <button type="submit" name="submit" id="add_btn" class="btn">Gerar</button>
         </form>
-<?php  
+
+<?php
 
 if (isset($_POST['submit'])){ 
     if (empty($text)) {
        
     }else{
-        echo "<center><img src='".$file."'></center>
-        <center><p><a style='color: black;text-decoration: none; padding: 5px; border: 1px solid black; ' href='index.php?qrcode=".$file."'>Download</a></p></center>";
+        echo "<center class='qrcode'><img src='".$file."'></center>
+        <center class='download'><p><a style='color: black;text-decoration: none; padding: 5px; border: 1px solid black; ' href='index.php?qrcode=".$file."'>Download</a></p></center>";
     }
 
-}?>
+}
+echo $error;
+?>
 </div>
 
 </body>

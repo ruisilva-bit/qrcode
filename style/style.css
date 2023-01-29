@@ -22,3 +22,45 @@ body {
     flex-wrap: wrap;
     align-items: center;
   }
+
+  .input_form{
+    width: 100%;
+    text-align: center;
+  }
+
+  .input_form .text_input{
+    color: black;
+    text-decoration: none; 
+    padding: 5px; 
+    border: 1px solid black; 
+  }
+
+  .input_form .btn{
+    background-color: white;
+    color: black;
+    text-decoration: none; 
+    padding: 5px; 
+    border: 1px solid black; 
+  }
+
+  .input_form .btn:hover{
+    background-color: black;
+    color: white;
+    text-decoration: none; 
+    padding: 5px; 
+    border: 1px solid black; 
+  }
+
+  .qrcode{
+    width: 100%;
+  }
+
+  .download{
+    width: 100%;
+  }
+
+  .error{
+    width: 100%;
+    text-align: center;
+    padding: 1.5em;
+  }
